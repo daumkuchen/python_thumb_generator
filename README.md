@@ -1,1 +1,1 @@
-# python-thumb-generator
+# python_thumb_generator
