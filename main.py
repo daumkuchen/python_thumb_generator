@@ -34,7 +34,10 @@ def main():
   name = args[1]
 
   # spotifyから取得するアルバムのid
-  album_id = args[2]
+  spotify_url = args[2]
+  album_id = spotify_url
+  album_id = album_id.replace("https://open.spotify.com/album/", "")
+  album_id = album_id.split("?")[0]
 
   # spotifyからカバー画像取得
   cover_url = utils.spotify.get_album_cover_url(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, album_id)
